@@ -1,13 +1,15 @@
 import React from "react";
 import mobileMockup from "../assets/hero.png";
-import { FaGooglePlay, FaApple, FaStar, FaDownload } from "react-icons/fa";
+import {  FaStar, FaDownload } from "react-icons/fa";
+import googlePlay from "../assets/google-play_888857.png";
+import appStore from "../assets/game_16566128.png";
 
 const Home = () => {
   return (
-    <section className="text-center pt-10 bg-white overflow-hidden">
+    <section className="text-center pt-10 overflow-hidden w-full">
       {/* Top Section */}
-      <div className="max-w-3xl mx-auto px-4">
-        <h1 className="text-4xl sm:text-5xl font-extrabold mb-4 leading-snug">
+      <div className="max-w-4xl  mx-auto ">
+        <h1 className="text-xl sm:text-5xl font-extrabold mb-4 leading-snug">
           We Build <br />
           <span className="bg-gradient-to-r from-[#632EE3] to-[#9F62F2] bg-clip-text text-transparent">
             Productive
@@ -24,10 +26,10 @@ const Home = () => {
         {/* Buttons */}
         <div className="flex justify-center gap-4 mb-10 flex-wrap">
           <button className="flex items-center gap-2 bg-gray-200 text-black px-5 py-2.5 rounded hover:opacity-90 transition">
-            <FaGooglePlay className="text-lg" /> Google Play
+            <img src={googlePlay} alt="" className="h-5 w-5" /> Google Play
           </button>
           <button className="flex items-center gap-2 bg-gray-200 text-black px-5 py-2.5 rounded hover:bg-gray-300 transition">
-            <FaApple className="text-lg" /> App Store
+            <img src={appStore} alt="" className="h-5 w-5" /> App Store
           </button>
         </div>
 
@@ -40,43 +42,49 @@ const Home = () => {
           />
         </div>
       </div>
+          
+{/* Stats Section */}
+<div className=" bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white py-20 ">
+  <div className=" mx-auto px-40 text-center">
+    <h2 className="text-2xl sm:text-3xl font-semibold mb-10">
+      Trusted By Millions, Built For You
+    </h2>
 
-      {/* Stats Section */}
-      <div className="w-full bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white py-10 m-0">
-        <h2 className="text-2xl sm:text-3xl font-semibold mb-15">
-          Trusted By Millions, Built For You
-        </h2>
-
-        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-10 px-6">
-          <div>
-            <h3 className="text-4xl font-bold">29.6M</h3>
-            <p className="opacity-80 text-sm sm:text-base">Total Downloads</p>
-            <p className="text-sm mt-1 opacity-90">21% More Than Last Month</p>
-          </div>
-          <div>
-            <h3 className="text-4xl font-bold">906K</h3>
-            <p className="opacity-80 text-sm sm:text-base">Total Reviews</p>
-            <p className="text-sm mt-1 opacity-90">48% More Than Last Month</p>
-          </div>
-          <div>
-            <h3 className="text-4xl font-bold">132+</h3>
-            <p className="opacity-80 text-sm sm:text-base">Active Apps</p>
-            <p className="text-sm mt-1 opacity-90">31 More Was Launched</p>
-          </div>
-        </div>
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-7xl mx-auto">
+      <div>
+        <p className="opacity-80 text-sm sm:text-base">Total Downloads</p>
+        <h3 className="text-4xl font-bold p-2">29.6M</h3>
+        <p className="text-sm mt-1 opacity-90">21% More Than Last Month</p>
       </div>
+      <div>
+        <p className="opacity-80 text-sm sm:text-base">Total Reviews</p>
+        <h3 className="text-4xl font-bold p-2">906K</h3>
+        <p className="text-sm mt-1 opacity-90">48% More Than Last Month</p>
+      </div>
+      <div>
+         <p className="opacity-80 text-sm sm:text-base">Active Apps</p>
+        <h3 className="text-4xl font-bold p-2">132+</h3>
+        <p className="text-sm mt-1 opacity-90">31 More Was Launched</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+
 
       {/* Trending Apps Section */}
-      <div className="py-20 bg-white">
+      <div className="py-20">
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
-          Trending <span className="text-[#632EE3]">Apps</span>
+          Trending Apps
         </h2>
         <p className="text-gray-500 mb-12">
           Explore All Trending Apps on the Market developed by us
         </p>
 
         {/* Cards */}
-        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-6">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
           {/* Each card manually written */}
           <div className="border border-gray-200 rounded-xl shadow-sm p-4 hover:shadow-md transition bg-white">
             <div className="w-full h-40 bg-gray-100 rounded-lg mb-4"></div>
@@ -223,6 +231,8 @@ const Home = () => {
         </div>
       </div>
     </section>
+
+    
   );
 };
 

@@ -3,8 +3,14 @@ import mobileMockup from "../assets/hero.png";
 import {  FaStar, FaDownload } from "react-icons/fa";
 import googlePlay from "../assets/google-play_888857.png";
 import appStore from "../assets/game_16566128.png";
-
+import useApps from "../Hooks/useApps";
+import { Link } from "react-router";
+import AppCard from '../Components/AppCard'
+import SkeletonLoader from '../Components/SkeletonLoader'
 const Home = () => {
+  const { loading,  apps } = useApps()
+
+  const featuredApps = apps.slice(0, 6)
   return (
     <section className="text-center pt-10 overflow-hidden w-full">
       {/* Top Section */}
@@ -84,9 +90,9 @@ const Home = () => {
         </p>
 
         {/* Cards */}
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
+        {/* <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 "> */}
           {/* Each card manually written */}
-          <div className="border border-gray-200 rounded-xl shadow-sm p-4 hover:shadow-md transition bg-white">
+          {/* <div className="border border-gray-200 rounded-xl shadow-sm p-4 hover:shadow-md transition bg-white">
             <div className="w-full h-40 bg-gray-100 rounded-lg mb-4"></div>
             <h3 className="text-sm font-semibold text-gray-800 mb-3">
               Forest: Focus For Productivity
@@ -101,9 +107,9 @@ const Home = () => {
                 <span>4.8</span>
               </div>
             </div>
-          </div>
+          </div> */}
 
-          <div className="border border-gray-200 rounded-xl shadow-sm p-4 hover:shadow-md transition bg-white">
+          {/* <div className="border border-gray-200 rounded-xl shadow-sm p-4 hover:shadow-md transition bg-white">
             <div className="w-full h-40 bg-gray-100 rounded-lg mb-4"></div>
             <h3 className="text-sm font-semibold text-gray-800 mb-3">
               SnPlan: ToDo List With Reminder
@@ -118,9 +124,9 @@ const Home = () => {
                 <span>4.6</span>
               </div>
             </div>
-          </div>
+          </div> */}
 
-          <div className="border border-gray-200 rounded-xl shadow-sm p-4 hover:shadow-md transition bg-white">
+          {/* <div className="border border-gray-200 rounded-xl shadow-sm p-4 hover:shadow-md transition bg-white">
             <div className="w-full h-40 bg-gray-100 rounded-lg mb-4"></div>
             <h3 className="text-sm font-semibold text-gray-800 mb-3">
               FLIP - Focus Timer For Study
@@ -135,9 +141,9 @@ const Home = () => {
                 <span>4.7</span>
               </div>
             </div>
-          </div>
+          </div> */}
 
-          <div className="border border-gray-200 rounded-xl shadow-sm p-4 hover:shadow-md transition bg-white">
+          {/* <div className="border border-gray-200 rounded-xl shadow-sm p-4 hover:shadow-md transition bg-white">
             <div className="w-full h-40 bg-gray-100 rounded-lg mb-4"></div>
             <h3 className="text-sm font-semibold text-gray-800 mb-3">
               Pomocat - Cute Pomodoro Timer
@@ -152,9 +158,9 @@ const Home = () => {
                 <span>4.9</span>
               </div>
             </div>
-          </div>
+          </div> */}
 
-          <div className="border border-gray-200 rounded-xl shadow-sm p-4 hover:shadow-md transition bg-white">
+          {/* <div className="border border-gray-200 rounded-xl shadow-sm p-4 hover:shadow-md transition bg-white">
             <div className="w-full h-40 bg-gray-100 rounded-lg mb-4"></div>
             <h3 className="text-sm font-semibold text-gray-800 mb-3">
               Time Planner: Schedule & Tasks
@@ -169,9 +175,9 @@ const Home = () => {
                 <span>4.5</span>
               </div>
             </div>
-          </div>
+          </div> */}
 
-          <div className="border border-gray-200 rounded-xl shadow-sm p-4 hover:shadow-md transition bg-white">
+          {/* <div className="border border-gray-200 rounded-xl shadow-sm p-4 hover:shadow-md transition bg-white">
             <div className="w-full h-40 bg-gray-100 rounded-lg mb-4"></div>
             <h3 className="text-sm font-semibold text-gray-800 mb-3">
               Morning Habits - Daily Routine
@@ -186,9 +192,9 @@ const Home = () => {
                 <span>4.6</span>
               </div>
             </div>
-          </div>
+          </div> */}
 
-          <div className="border border-gray-200 rounded-xl shadow-sm p-4 hover:shadow-md transition bg-white">
+          {/* <div className="border border-gray-200 rounded-xl shadow-sm p-4 hover:shadow-md transition bg-white">
             <div className="w-full h-40 bg-gray-100 rounded-lg mb-4"></div>
             <h3 className="text-sm font-semibold text-gray-800 mb-3">
               Focus Plant: Pomodoro Forest
@@ -203,9 +209,9 @@ const Home = () => {
                 <span>4.8</span>
               </div>
             </div>
-          </div>
+          </div> */}
 
-          <div className="border border-gray-200 rounded-xl shadow-sm p-4 hover:shadow-md transition bg-white">
+          {/* <div className="border border-gray-200 rounded-xl shadow-sm p-4 hover:shadow-md transition bg-white">
             <div className="w-full h-40 bg-gray-100 rounded-lg mb-4"></div>
             <h3 className="text-sm font-semibold text-gray-800 mb-3">
               Alarmy - Alarm Clock & Sleep
@@ -220,14 +226,24 @@ const Home = () => {
                 <span>4.9</span>
               </div>
             </div>
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
 
         {/* Show All Button */}
-        <div className="mt-10">
-          <button className="px-8 py-2 bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white font-semibold rounded-md hover:opacity-90 transition">
+        
+        {loading ? (
+        <SkeletonLoader />
+      ) : (
+        <div className='max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
+          {featuredApps.map(App => (
+            <AppCard key={App.id} App={App} />
+          ))}
+        </div>
+      )}
+      <div className="mt-10">
+          <Link className="px-8 py-2 bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white font-semibold rounded-md hover:opacity-90 transition" to='/Apps'>
             Show All
-          </button>
+          </Link>
         </div>
       </div>
     </section>

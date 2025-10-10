@@ -1,0 +1,272 @@
+[
+  {
+    "image": "../src/assets/demo-app (2).webp",
+    "title": "ChatConnect",
+    "companyName": "TechNova Ltd.",
+    "id": 1,
+    "description": "A fast and secure messaging app that connects you with friends worldwide.",
+    "size": 45,
+    "reviews": 12000,
+    "ratingAvg": 4.6,
+    "downloads": 5000000,
+    "ratings": [
+      { "name": "1 star", "count": 400 },
+      { "name": "2 star", "count": 800 },
+      { "name": "3 star", "count": 1500 },
+      { "name": "4 star", "count": 2500 },
+      { "name": "5 star", "count": 6800 }
+    ]
+  },
+  {
+    "image": "../src/assets/fittrack.jpg",
+    "title": "FitTrack Pro",
+    "companyName": "ActiveMotion Inc.",
+    "id": 2,
+    "description": "Track workouts, count calories, and achieve your fitness goals with AI-based insights.",
+    "size": 65,
+    "reviews": 8900,
+    "ratingAvg": 4.4,
+    "downloads": 3200000,
+    "ratings": [
+      { "name": "1 star", "count": 600 },
+      { "name": "2 star", "count": 1000 },
+      { "name": "3 star", "count": 1800 },
+      { "name": "4 star", "count": 2200 },
+      { "name": "5 star", "count": 3300 }
+    ]
+  },
+  {
+    "image": "../src/assets/easynotes.jpg",
+    "title": "NoteEase",
+    "companyName": "SoftMind Labs",
+    "id": 3,
+    "description": "Organize your thoughts, to-dos, and reminders in one clean, synced notebook app.",
+    "size": 28,
+    "reviews": 5600,
+    "ratingAvg": 4.7,
+    "downloads": 1800000,
+    "ratings": [
+      { "name": "1 star", "count": 150 },
+      { "name": "2 star", "count": 300 },
+      { "name": "3 star", "count": 800 },
+      { "name": "4 star", "count": 1500 },
+      { "name": "5 star", "count": 2850 }
+    ]
+  },
+  {
+    "image": "../src/assets/travel.jfif",
+    "title": "TravelMate",
+    "companyName": "Wanderly Studios",
+    "id": 4,
+    "description": "Plan, book, and explore destinations with AI travel recommendations and guides.",
+    "size": 78,
+    "reviews": 9800,
+    "ratingAvg": 4.3,
+    "downloads": 2500000,
+    "ratings": [
+      { "name": "1 star", "count": 900 },
+      { "name": "2 star", "count": 1100 },
+      { "name": "3 star", "count": 1900 },
+      { "name": "4 star", "count": 2600 },
+      { "name": "5 star", "count": 3300 }
+    ]
+  },
+  {
+    "image": "../src/assets/BudgetBuddy.jfif",
+    "title": "BudgetBuddy",
+    "companyName": "FinEdge Technologies",
+    "id": 5,
+    "description": "Manage your finances, track expenses, and grow your savings effortlessly.",
+    "size": 54,
+    "reviews": 7400,
+    "ratingAvg": 4.5,
+    "downloads": 4200000,
+    "ratings": [
+      { "name": "1 star", "count": 300 },
+      { "name": "2 star", "count": 500 },
+      { "name": "3 star", "count": 1200 },
+      { "name": "4 star", "count": 2300 },
+      { "name": "5 star", "count": 3100 }
+    ]
+  },
+  {
+    "image": "../src/assets/MusicFlow.png",
+    "title": "MusicFlow",
+    "companyName": "Harmoniq Media",
+    "id": 6,
+    "description": "Stream millions of songs and discover new artists with personalized playlists.",
+    "size": 98,
+    "reviews": 22000,
+    "ratingAvg": 4.8,
+    "downloads": 10000000,
+    "ratings": [
+      { "name": "1 star", "count": 1200 },
+      { "name": "2 star", "count": 1600 },
+      { "name": "3 star", "count": 3200 },
+      { "name": "4 star", "count": 5800 },
+      { "name": "5 star", "count": 10200 }
+    ]
+  },
+  {
+    "image": "../src/assets/Learnly.jfif",
+    "title": "Learnly",
+    "companyName": "EduSmart Co.",
+    "id": 7,
+    "description": "Interactive learning app with video courses, quizzes, and progress tracking.",
+    "size": 82,
+    "reviews": 11200,
+    "ratingAvg": 4.2,
+    "downloads": 3600000,
+    "ratings": [
+      { "name": "1 star", "count": 800 },
+      { "name": "2 star", "count": 1000 },
+      { "name": "3 star", "count": 2000 },
+      { "name": "4 star", "count": 2900 },
+      { "name": "5 star", "count": 4500 }
+    ]
+  },
+  {
+    "image": "../src/assets/Foodiez.jpg",
+    "title": "Foodiez",
+    "companyName": "DelishHub Pvt Ltd.",
+    "id": 8,
+    "description": "Discover nearby restaurants, explore cuisines, and order food online.",
+    "size": 70,
+    "reviews": 15700,
+    "ratingAvg": 4.1,
+    "downloads": 7200000,
+    "ratings": [
+      { "name": "1 star", "count": 1800 },
+      { "name": "2 star", "count": 2200 },
+      { "name": "3 star", "count": 3000 },
+      { "name": "4 star", "count": 4000 },
+      { "name": "5 star", "count": 4700 }
+    ]
+  },
+  {
+    "image": "../src/assets/demo-app (3).webp",
+    "title": "WeatherCast",
+    "companyName": "SkyLink Systems",
+    "id": 9,
+    "description": "Accurate weather forecasts, radar maps, and severe weather alerts.",
+    "size": 40,
+    "reviews": 5400,
+    "ratingAvg": 4.0,
+    "downloads": 2900000,
+    "ratings": [
+      { "name": "1 star", "count": 500 },
+      { "name": "2 star", "count": 900 },
+      { "name": "3 star", "count": 1300 },
+      { "name": "4 star", "count": 1700 },
+      { "name": "5 star", "count": 1000 }
+    ]
+  },
+  {
+    "image": "../src/assets/PhotoSnap.jpg",
+    "title": "PhotoSnap",
+    "companyName": "PixelForge Studio",
+    "id": 10,
+    "description": "Capture, edit, and share stunning photos with filters and AI enhancements.",
+    "size": 85,
+    "reviews": 19800,
+    "ratingAvg": 4.9,
+    "downloads": 8400000,
+    "ratings": [
+      { "name": "1 star", "count": 1000 },
+      { "name": "2 star", "count": 1300 },
+      { "name": "3 star", "count": 2500 },
+      { "name": "4 star", "count": 5000 },
+      { "name": "5 star", "count": 10000 }
+    ]
+  },
+  {
+    "image": "../src/assets/demo-app (1).webp",
+    "title": "MindEase",
+    "companyName": "CalmSpace",
+    "id": 11,
+    "description": "Meditation and relaxation app to improve mental health and sleep quality.",
+    "size": 60,
+    "reviews": 7200,
+    "ratingAvg": 4.6,
+    "downloads": 3100000,
+    "ratings": [
+      { "name": "1 star", "count": 400 },
+      { "name": "2 star", "count": 500 },
+      { "name": "3 star", "count": 1000 },
+      { "name": "4 star", "count": 2100 },
+      { "name": "5 star", "count": 3200 }
+    ]
+  },
+  {
+    "image": "../src/assets/ShopEase.jpg",
+    "title": "ShopEase",
+    "companyName": "NextCart Ltd.",
+    "id": 12,
+    "description": "Shop online effortlessly with fast delivery, secure payments, and deals.",
+    "size": 75,
+    "reviews": 17800,
+    "ratingAvg": 4.3,
+    "downloads": 9100000,
+    "ratings": [
+      { "name": "1 star", "count": 1400 },
+      { "name": "2 star", "count": 1600 },
+      { "name": "3 star", "count": 2400 },
+      { "name": "4 star", "count": 3400 },
+      { "name": "5 star", "count": 7000 }
+    ]
+  },
+  {
+    "image": "../src/assets/TaskFlow.png",
+    "title": "TaskFlow",
+    "companyName": "OrganizeIt Inc.",
+    "id": 13,
+    "description": "Boost productivity with powerful task lists, project boards, and reminders.",
+    "size": 49,
+    "reviews": 8500,
+    "ratingAvg": 4.5,
+    "downloads": 4100000,
+    "ratings": [
+      { "name": "1 star", "count": 300 },
+      { "name": "2 star", "count": 700 },
+      { "name": "3 star", "count": 1300 },
+      { "name": "4 star", "count": 2200 },
+      { "name": "5 star", "count": 4000 }
+    ]
+  },
+  {
+    "image": "../src/assets/StreamBox.jpg",
+    "title": "StreamBox",
+    "companyName": "CineMax Media",
+    "id": 14,
+    "description": "Watch movies, TV shows, and live streams in HD without interruptions.",
+    "size": 150,
+    "reviews": 27500,
+    "ratingAvg": 4.7,
+    "downloads": 20000000,
+    "ratings": [
+      { "name": "1 star", "count": 2000 },
+      { "name": "2 star", "count": 2500 },
+      { "name": "3 star", "count": 4000 },
+      { "name": "4 star", "count": 5500 },
+      { "name": "5 star", "count": 13500 }
+    ]
+  },
+  {
+    "image": "../src/assets/GameVerse.webp",
+    "title": "GameVerse",
+    "companyName": "Playfinity Studios",
+    "id": 15,
+    "description": "Access a library of mobile games, leaderboards, and real-time challenges.",
+    "size": 120,
+    "reviews": 34000,
+    "ratingAvg": 4.8,
+    "downloads": 25000000,
+    "ratings": [
+      { "name": "1 star", "count": 2200 },
+      { "name": "2 star", "count": 2600 },
+      { "name": "3 star", "count": 5000 },
+      { "name": "4 star", "count": 7200 },
+      { "name": "5 star", "count": 17000 }
+    ]
+  }
+]

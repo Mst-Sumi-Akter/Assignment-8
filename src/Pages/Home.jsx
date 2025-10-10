@@ -1,12 +1,11 @@
 import React from "react";
 import mobileMockup from "../assets/hero.png";
-import {  FaStar, FaDownload } from "react-icons/fa";
 import googlePlay from "../assets/google-play_888857.png";
 import appStore from "../assets/game_16566128.png";
 import useApps from "../Hooks/useApps";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import AppCard from '../Components/AppCard'
-import SkeletonLoader from '../Components/SkeletonLoader'
+import LoadingSpinner from "../Components/LoadingSpinner";
 const Home = () => {
   const { loading,  apps } = useApps()
 
@@ -89,150 +88,10 @@ const Home = () => {
           Explore All Trending Apps on the Market developed by us
         </p>
 
-        {/* Cards */}
-        {/* <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 "> */}
-          {/* Each card manually written */}
-          {/* <div className="border border-gray-200 rounded-xl shadow-sm p-4 hover:shadow-md transition bg-white">
-            <div className="w-full h-40 bg-gray-100 rounded-lg mb-4"></div>
-            <h3 className="text-sm font-semibold text-gray-800 mb-3">
-              Forest: Focus For Productivity
-            </h3>
-            <div className="flex justify-between text-xs text-gray-500">
-              <div className="flex items-center gap-1">
-                <FaDownload className="text-[#00C853]" />
-                <span>4.5M</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <FaStar className="text-yellow-400" />
-                <span>4.8</span>
-              </div>
-            </div>
-          </div> */}
-
-          {/* <div className="border border-gray-200 rounded-xl shadow-sm p-4 hover:shadow-md transition bg-white">
-            <div className="w-full h-40 bg-gray-100 rounded-lg mb-4"></div>
-            <h3 className="text-sm font-semibold text-gray-800 mb-3">
-              SnPlan: ToDo List With Reminder
-            </h3>
-            <div className="flex justify-between text-xs text-gray-500">
-              <div className="flex items-center gap-1">
-                <FaDownload className="text-[#00C853]" />
-                <span>3.9M</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <FaStar className="text-yellow-400" />
-                <span>4.6</span>
-              </div>
-            </div>
-          </div> */}
-
-          {/* <div className="border border-gray-200 rounded-xl shadow-sm p-4 hover:shadow-md transition bg-white">
-            <div className="w-full h-40 bg-gray-100 rounded-lg mb-4"></div>
-            <h3 className="text-sm font-semibold text-gray-800 mb-3">
-              FLIP - Focus Timer For Study
-            </h3>
-            <div className="flex justify-between text-xs text-gray-500">
-              <div className="flex items-center gap-1">
-                <FaDownload className="text-[#00C853]" />
-                <span>4.9M</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <FaStar className="text-yellow-400" />
-                <span>4.7</span>
-              </div>
-            </div>
-          </div> */}
-
-          {/* <div className="border border-gray-200 rounded-xl shadow-sm p-4 hover:shadow-md transition bg-white">
-            <div className="w-full h-40 bg-gray-100 rounded-lg mb-4"></div>
-            <h3 className="text-sm font-semibold text-gray-800 mb-3">
-              Pomocat - Cute Pomodoro Timer
-            </h3>
-            <div className="flex justify-between text-xs text-gray-500">
-              <div className="flex items-center gap-1">
-                <FaDownload className="text-[#00C853]" />
-                <span>2.1M</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <FaStar className="text-yellow-400" />
-                <span>4.9</span>
-              </div>
-            </div>
-          </div> */}
-
-          {/* <div className="border border-gray-200 rounded-xl shadow-sm p-4 hover:shadow-md transition bg-white">
-            <div className="w-full h-40 bg-gray-100 rounded-lg mb-4"></div>
-            <h3 className="text-sm font-semibold text-gray-800 mb-3">
-              Time Planner: Schedule & Tasks
-            </h3>
-            <div className="flex justify-between text-xs text-gray-500">
-              <div className="flex items-center gap-1">
-                <FaDownload className="text-[#00C853]" />
-                <span>5.1M</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <FaStar className="text-yellow-400" />
-                <span>4.5</span>
-              </div>
-            </div>
-          </div> */}
-
-          {/* <div className="border border-gray-200 rounded-xl shadow-sm p-4 hover:shadow-md transition bg-white">
-            <div className="w-full h-40 bg-gray-100 rounded-lg mb-4"></div>
-            <h3 className="text-sm font-semibold text-gray-800 mb-3">
-              Morning Habits - Daily Routine
-            </h3>
-            <div className="flex justify-between text-xs text-gray-500">
-              <div className="flex items-center gap-1">
-                <FaDownload className="text-[#00C853]" />
-                <span>3.4M</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <FaStar className="text-yellow-400" />
-                <span>4.6</span>
-              </div>
-            </div>
-          </div> */}
-
-          {/* <div className="border border-gray-200 rounded-xl shadow-sm p-4 hover:shadow-md transition bg-white">
-            <div className="w-full h-40 bg-gray-100 rounded-lg mb-4"></div>
-            <h3 className="text-sm font-semibold text-gray-800 mb-3">
-              Focus Plant: Pomodoro Forest
-            </h3>
-            <div className="flex justify-between text-xs text-gray-500">
-              <div className="flex items-center gap-1">
-                <FaDownload className="text-[#00C853]" />
-                <span>9.0M</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <FaStar className="text-yellow-400" />
-                <span>4.8</span>
-              </div>
-            </div>
-          </div> */}
-
-          {/* <div className="border border-gray-200 rounded-xl shadow-sm p-4 hover:shadow-md transition bg-white">
-            <div className="w-full h-40 bg-gray-100 rounded-lg mb-4"></div>
-            <h3 className="text-sm font-semibold text-gray-800 mb-3">
-              Alarmy - Alarm Clock & Sleep
-            </h3>
-            <div className="flex justify-between text-xs text-gray-500">
-              <div className="flex items-center gap-1">
-                <FaDownload className="text-[#00C853]" />
-                <span>8.3M</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <FaStar className="text-yellow-400" />
-                <span>4.9</span>
-              </div>
-            </div>
-          </div> */}
-        {/* </div> */}
-
         {/* Show All Button */}
         
         {loading ? (
-        <SkeletonLoader />
+        <LoadingSpinner />
       ) : (
         <div className='max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
           {featuredApps.map(App => (

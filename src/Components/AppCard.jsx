@@ -9,7 +9,9 @@ const AppCard = ({ App }) => {
    ratings?.reduce((sum, r) => sum + r.count, 0)
 
   return (
-    <div className='border border-gray-200 rounded-xl shadow-sm p-4 hover:shadow-md transition bg-white'>
+    
+    <Link to={`/apps/${App.id}`}>
+    <div className='border border-gray-200 rounded-xl shadow-sm p-4 hover:scale-105 transition ease-in-out bg-white'>
       {/* Image */}
       <figure className='h-40 overflow-hidden mb-3'>
         <img
@@ -37,6 +39,7 @@ const AppCard = ({ App }) => {
       </div>
       
     </div>
+    </Link>
   )
 }
 

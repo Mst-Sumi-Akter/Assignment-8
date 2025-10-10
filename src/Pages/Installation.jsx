@@ -3,6 +3,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import star from "../assets/icon-ratings.png";
 import downloadsIcon from "../assets/icon-downloads.png";
+import { images } from "../assets/images";
 
 const Installation = () => {
   const [installedApps, setInstalledApps] = useState(() => {
@@ -26,7 +27,7 @@ const Installation = () => {
     toast.info(`${app.title} uninstalled!`);
   };
 
-  // Sorting logic (downloads are already numbers)
+  // Sorting logic
   const sortedApps = useMemo(() => {
     return [...installedApps].sort((a, b) => {
       if (sortOption === "downloadsLowHigh") return a.downloads - b.downloads;
@@ -75,9 +76,9 @@ const Installation = () => {
           {/* Left: App Icon */}
           <div className="flex items-center gap-4">
             <img
-              src={a.image || "https://via.placeholder.com/80"}
-              alt={a.title}
-              className="w-20 h-20 object-cover rounded-md"
+             src={images[Number(a.id)] || "https://via.placeholder.com/80"}
+             alt={a.title}
+             className="w-30 h-30 object-cover rounded-md"
             />
 
             {/* Middle: App Info */}

@@ -3,10 +3,12 @@ import { useParams, Link } from "react-router-dom";
 import useApps from "../Hooks/useApps";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import LoadingSpinner from "../Components/LoadingSpinner";
 
 import review from "../assets/icon-review.png";
-import rating from "../assets/icon-ratings.png";
+import ratingIcon from "../assets/icon-ratings.png";
 import download from "../assets/icon-downloads.png";
+import { images } from "../assets/images";
 
 import {
   BarChart,
@@ -21,13 +23,12 @@ import {
 const AppDetails = () => {
   const { id } = useParams();
   const { apps, loading } = useApps();
-  const app = apps.find((a) => a.id === parseInt(id));
+  const app = apps.find((a) => a.id === Number(id));
 
   const [installedApps, setInstalledApps] = useState(() => {
     const saved = localStorage.getItem("installedApps");
     return saved ? JSON.parse(saved) : [];
   });
-
   const [isInstalled, setIsInstalled] = useState(false);
 
   useEffect(() => {
@@ -47,9 +48,7 @@ const AppDetails = () => {
     }
   };
 
-  if (loading) {
-  return <LoadingSpinner />;
-}
+  if (loading) return <LoadingSpinner />;
 
   if (!app) {
     return (
@@ -69,28 +68,20 @@ const AppDetails = () => {
     <section className="max-w-7xl mx-auto px-4 py-10">
       {/* Top Section */}
       <div className="flex flex-col md:flex-row items-start gap-8 border-b pb-10">
-        {/* App Icon */}
         <div className="w-full md:w-1/3">
           <img
-            src={app.image}
-            alt={app.title}
-            className="rounded-xl shadow-md w-full h-80 object-cover"
+             src={images[Number(app.id)] || "https://via.placeholder.com/400"}
+              alt={app.title}
+              className="rounded-xl shadow-md w-full h-80 object-cover"
           />
         </div>
 
-        {/* App Info */}
         <div className="flex-1">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-            {app.title}
-          </h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">{app.title}</h2>
           <p className="text-gray-600 mb-4 border-b pb-10">
-            Developed by{" "}
-            <span className="text-blue-600 hover:underline cursor-pointer">
-              {app.developer}
-            </span>
+            Developed by <span className="text-blue-600 hover:underline cursor-pointer">{app.developer}</span>
           </p>
 
-          {/* Stats */}
           <div className="grid grid-cols-3 gap-6 mb-6 mt-10">
             <div>
               <img src={download} alt="" />
@@ -98,69 +89,56 @@ const AppDetails = () => {
               <p className="text-2xl font-bold text-black">{app.downloads}</p>
             </div>
             <div>
-              <img src={rating} alt="" />
+              <img src={ratingIcon} alt="" />
               <p className="text-sm text-gray-500">Average Rating</p>
               <p className="text-2xl font-bold text-black">{app.ratingAvg}</p>
             </div>
             <div>
               <img src={review} alt="" />
               <p className="text-sm text-gray-500">Total Reviews</p>
-              <p className="text-2xl font-bold text-black">{app.reviews}K</p>
+              <p className="text-2xl font-bold text-black">{app.reviews || 0}K</p>
             </div>
           </div>
 
-          {/* Install Button */}
           <button
             onClick={handleInstall}
             disabled={isInstalled}
             className={`px-6 py-3 rounded-md font-medium transition ${
-              isInstalled
-                ? "bg-gray-400 cursor-not-allowed"
-                : "bg-green-600 text-white hover:bg-green-700"
+              isInstalled ? "bg-gray-400 cursor-not-allowed" : "bg-green-600 text-white hover:bg-green-700"
             }`}
           >
-            {isInstalled ? "Installed" : `Install Now (${app.size} MB)`}
+            {isInstalled ? "Installed" : `Install Now (${app.size || 0} MB)`}
           </button>
         </div>
       </div>
 
       {/* Ratings Chart */}
-      <div className="mt-10">
-        <h3 className="text-2xl font-semibold mb-6 text-gray-800">Ratings</h3>
-        <div className="w-full h-80">
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart
-              layout="vertical"
-              data={app.ratings
-                .slice()
-                .reverse()
-                .map((r) => ({ name: r.name, value: r.count }))}
-              margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
-            >
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis type="number" />
-              <YAxis dataKey="name" type="category" width={50} />
-              <Tooltip />
-              <Bar
-                dataKey="value"
-                fill="#ff8800"
-                barSize={20}
-                radius={[10, 10, 10, 10]}
-              />
-            </BarChart>
-          </ResponsiveContainer>
+      {app.ratings?.length > 0 && (
+        <div className="mt-10">
+          <h3 className="text-2xl font-semibold mb-6 text-gray-800">Ratings</h3>
+          <div className="w-full h-80">
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart
+                layout="vertical"
+                data={app.ratings.slice().reverse().map(r => ({ name: r.name, value: r.count }))}
+                margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+              >
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis type="number" />
+                <YAxis dataKey="name" type="category" width={50} />
+                <Tooltip />
+                <Bar dataKey="value" fill="#ff8800" barSize={20} radius={[10, 10, 10, 10]} />
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
         </div>
-      </div>
+      )}
 
-      {/* Description */}
       <div className="mt-10">
-        <h3 className="text-2xl font-semibold mb-4 text-gray-800">
-          Description
-        </h3>
-        <p className="text-gray-600 leading-relaxed">{app.description}</p>
+        <h3 className="text-2xl font-semibold mb-4 text-gray-800">Description</h3>
+        <p className="text-gray-600 leading-relaxed">{app.description || "No description provided."}</p>
       </div>
 
-      {/* Back Button */}
       <div className="mt-10">
         <Link
           to="/apps"

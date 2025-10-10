@@ -1,6 +1,6 @@
 [
   {
-    "image": "../src/assets/demo-app (2).webp",
+    
     "title": "ChatConnect",
     "companyName": "TechNova Ltd.",
     "id": 1,
@@ -18,7 +18,7 @@
     ]
   },
   {
-    "image": "../src/assets/fittrack.jpg",
+    
     "title": "FitTrack Pro",
     "companyName": "ActiveMotion Inc.",
     "id": 2,
@@ -36,7 +36,7 @@
     ]
   },
   {
-    "image": "../src/assets/easynotes.jpg",
+   
     "title": "NoteEase",
     "companyName": "SoftMind Labs",
     "id": 3,
@@ -54,7 +54,7 @@
     ]
   },
   {
-    "image": "../src/assets/travel.jfif",
+   
     "title": "TravelMate",
     "companyName": "Wanderly Studios",
     "id": 4,
@@ -72,7 +72,7 @@
     ]
   },
   {
-    "image": "../src/assets/BudgetBuddy.jfif",
+    
     "title": "BudgetBuddy",
     "companyName": "FinEdge Technologies",
     "id": 5,
@@ -90,7 +90,7 @@
     ]
   },
   {
-    "image": "../src/assets/MusicFlow.png",
+    
     "title": "MusicFlow",
     "companyName": "Harmoniq Media",
     "id": 6,
@@ -108,7 +108,7 @@
     ]
   },
   {
-    "image": "../src/assets/Learnly.jfif",
+    
     "title": "Learnly",
     "companyName": "EduSmart Co.",
     "id": 7,
@@ -126,7 +126,7 @@
     ]
   },
   {
-    "image": "../src/assets/Foodiez.jpg",
+    
     "title": "Foodiez",
     "companyName": "DelishHub Pvt Ltd.",
     "id": 8,
@@ -144,7 +144,7 @@
     ]
   },
   {
-    "image": "../src/assets/demo-app (3).webp",
+    
     "title": "WeatherCast",
     "companyName": "SkyLink Systems",
     "id": 9,
@@ -162,7 +162,7 @@
     ]
   },
   {
-    "image": "../src/assets/PhotoSnap.jpg",
+    
     "title": "PhotoSnap",
     "companyName": "PixelForge Studio",
     "id": 10,
@@ -180,7 +180,7 @@
     ]
   },
   {
-    "image": "../src/assets/demo-app (1).webp",
+    
     "title": "MindEase",
     "companyName": "CalmSpace",
     "id": 11,
@@ -198,7 +198,7 @@
     ]
   },
   {
-    "image": "../src/assets/ShopEase.jpg",
+    
     "title": "ShopEase",
     "companyName": "NextCart Ltd.",
     "id": 12,
@@ -216,7 +216,7 @@
     ]
   },
   {
-    "image": "../src/assets/TaskFlow.png",
+   
     "title": "TaskFlow",
     "companyName": "OrganizeIt Inc.",
     "id": 13,
@@ -234,7 +234,7 @@
     ]
   },
   {
-    "image": "../src/assets/StreamBox.jpg",
+   
     "title": "StreamBox",
     "companyName": "CineMax Media",
     "id": 14,
@@ -252,7 +252,7 @@
     ]
   },
   {
-    "image": "../src/assets/GameVerse.webp",
+    
     "title": "GameVerse",
     "companyName": "Playfinity Studios",
     "id": 15,

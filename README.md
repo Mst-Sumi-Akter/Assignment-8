@@ -1,4 +1,4 @@
-# Project Name : Hero App
+# Project Name: Hero App
 
 Live link: https://admirable-griffin-cdd391.netlify.app/
 

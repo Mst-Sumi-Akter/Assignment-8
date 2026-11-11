@@ -1,8 +1,8 @@
 # Project Name: Hero App
 
-## Live link: https://admirable-griffin-cdd391.netlify.app/
+### Live link: https://admirable-griffin-cdd391.netlify.app/
 
-## Repository Link: https://github.com/Mst-Sumi-Akter/Assignment-8
+### Repository Link: https://github.com/Mst-Sumi-Akter/Assignment-8
 
 # React + Vite
 
